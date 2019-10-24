@@ -2,6 +2,12 @@
 ;;; Commentary:
 ;;; Code:
 
+
+;; ace jump mode
+(require-package 'ace-jump-mode)
+(global-set-key (kbd "C-c C-SPC") 'ace-jump-mode)
+(global-set-key (kbd "C-M-;") 'ace-jump-mode)
+
 (require-package 'unfill)
 
 (when (fboundp 'electric-pair-mode)
