@@ -25,6 +25,7 @@
   (global-set-key (kbd "M-?") 'rg-project))
 
 (customize-set-variable 'grep-use-null-device nil)
+(customize-set-variable 'grep-find-template "find <D> <X> -type f <F> -exec grep <C> -n <R> \"{}\" \";\"")
 
 (provide 'init-grep)
 ;;; init-grep.el ends here
