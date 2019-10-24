@@ -24,6 +24,7 @@
   (maybe-require-package 'deadgrep)
   (global-set-key (kbd "M-?") 'rg-project))
 
+(customize-set-variable 'grep-use-null-device nil)
 
 (provide 'init-grep)
 ;;; init-grep.el ends here
