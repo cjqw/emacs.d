@@ -6,6 +6,7 @@
 (setq desktop-path (list user-emacs-directory)
       desktop-auto-save-timeout 600)
 (desktop-save-mode 1)
+(customize-set-variable 'desktop-save 1)
 
 (defun sanityinc/desktop-time-restore (orig &rest args)
   (let ((start-time (current-time)))
