@@ -171,6 +171,7 @@
 (require 'init-locales)
 (require 'init-csharp)
 (require 'init-hotkey)
+(require 'init-setting)
 
 
 ;;----------------------------------------------------------------------------
