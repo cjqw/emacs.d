@@ -3,6 +3,10 @@
 ;;; Code:
 
 
+;;; undo tree mode
+(require-package 'undo-tree)
+(global-set-key (kbd "C-x u") 'undo-tree-visualize)
+
 ;; ace jump mode
 (require-package 'ace-jump-mode)
 (global-set-key (kbd "C-c C-SPC") 'ace-jump-mode)
