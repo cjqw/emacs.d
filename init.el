@@ -172,7 +172,7 @@
 (require 'init-csharp)
 (require 'init-hotkey)
 (require 'init-setting)
-
+(load-theme 'monokai)
 
 ;;----------------------------------------------------------------------------
 ;; Allow users to provide an optional "init-local" containing personal settings
