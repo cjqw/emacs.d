@@ -20,6 +20,10 @@
 ;; `org-todo-keywords' is customised here to provide corresponding
 ;; TODO states, which should make sense to GTD adherents.
 
+(require-package 'org-bullets)
+(add-hook 'org-mode-hook 'org-bullets-mode)
+(setq inhibit-compacting-font-caches t)
+
 ;;; Code:
 
 (when *is-a-mac*
