@@ -22,6 +22,7 @@
 
 (require-package 'org-bullets)
 (add-hook 'org-mode-hook 'org-bullets-mode)
+(add-hook 'org-mode-hook 'org-indent-mode)
 (setq inhibit-compacting-font-caches t)
 
 ;;; Code:
