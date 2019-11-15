@@ -4,6 +4,7 @@
 (global-set-key (kbd "C-c w") 'kill-this-buffer)
 (global-set-key (kbd "C-c k") 'kill-buffer-and-window)
 (global-set-key (kbd "C-c n") 'rename-buffer)
+(global-set-key (kbd "C-c r") 'revert-buffer)
 
 ;;; youdao dict
 (require-package 'youdao-dictionary)
