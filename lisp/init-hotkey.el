@@ -11,5 +11,8 @@
 (global-set-key (kbd "C-c y") 'youdao-dictionary-search-at-point+)
 (global-set-key (kbd "C-c C-y") 'youdao-dictionary-search-from-input)
 
-(provide 'init-hotkey)
+;;; disable windows buffer menu key as it is noisy in laptop
+;;; the original value of the binding is mouse-buffer-menu
+(global-unset-key [C-down-mouse-1])
 
+(provide 'init-hotkey)
