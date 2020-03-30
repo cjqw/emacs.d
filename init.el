@@ -8,6 +8,7 @@
 
 ;; Produce backtraces when errors occur
 (setq debug-on-error t)
+(setq visible-bell 1)
 
 (let ((minver "24.4"))
   (when (version< emacs-version minver)
