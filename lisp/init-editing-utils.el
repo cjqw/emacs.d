@@ -2,6 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 
+;;; magit mode
+(defun turn-off-auto-final-newline ()
+  (setq require-final-newline nil))
+(add-hook 'magit-file-mode-hook 'turn-off-auto-final-newline)
 
 ;;; undo tree mode
 (require-package 'undo-tree)
