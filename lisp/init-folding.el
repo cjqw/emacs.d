@@ -7,6 +7,8 @@
     (define-key origami-mode-map (kbd "C-c f") 'origami-recursively-toggle-node)
     (define-key origami-mode-map (kbd "C-c F") 'origami-toggle-all-nodes)))
 
+(add-hook 'csharp-mode-hook 'origami-mode)
+(add-hook 'python-mode-hook 'origami-mode)
 
 (provide 'init-folding)
 ;;; init-folding.el ends here
