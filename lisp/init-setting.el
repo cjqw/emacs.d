@@ -15,5 +15,9 @@
 
 (add-hook 'window-setup-hook 'maximize-frame t)
 
+;;; display PST time in mode line
+(setq display-time-mode t)
+(set-time-zone-rule "UTC+8")
+
 (provide 'init-setting)
 
