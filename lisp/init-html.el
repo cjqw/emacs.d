@@ -13,7 +13,7 @@
   (add-hook 'sgml-mode-hook (lambda () (tagedit-mode 1))))
 
 (add-auto-mode 'html-mode "\\.\\(jsp\\|tmpl\\)\\'")
-
+(add-auto-mode 'csharp-mode "\\.[Cc][Ss][Hh][tml]\\'")
 
 (provide 'init-html)
 ;;; init-html.el ends here
