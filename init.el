@@ -173,6 +173,7 @@
 (require 'init-csharp)
 (require 'init-hotkey)
 (require 'init-setting)
+(require 'init-magit)
 (load-theme 'monokai)
 
 ;;----------------------------------------------------------------------------
