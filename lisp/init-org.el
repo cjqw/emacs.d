@@ -27,6 +27,18 @@
 
 ;;; Code:
 
+(setq org-export-with-sub-superscripts '{})
+
+;;; override org-timer-item
+(defun org-insert-current-time-stamp (&optional arg)
+  (interactive)
+  (insert (format-time-string "\n- %H:%M:%S :: " (current-time) "UTC-8")))
+
+(defun org-timer-item (&optional arg)
+  "Insert a description-type item with the current timer value."
+  (interactive "P")
+  (org-insert-current-time-stamp arg))
+
 (when *is-a-mac*
   (maybe-require-package 'grab-mac-link))
 
@@ -84,21 +96,10 @@
       (unless (file-exists-p org-ditaa-jar-path)
         (sanityinc/grab-ditaa url jar-name)))))
 
-(after-load 'ob-plantuml
-  (let ((jar-name "plantuml.jar")
-        (url "http://jaist.dl.sourceforge.net/project/plantuml/plantuml.jar"))
-    (setq org-plantuml-jar-path (expand-file-name jar-name (file-name-directory user-init-file)))
-    (unless (file-exists-p org-plantuml-jar-path)
-      (url-copy-file url org-plantuml-jar-path))))
-
-
 ;; Re-align tags when window shape changes
 (after-load 'org-agenda
   (add-hook 'org-agenda-mode-hook
             (lambda () (add-hook 'window-configuration-change-hook 'org-agenda-align-tags nil t))))
-
-
-
 
 (maybe-require-package 'writeroom-mode)
 
@@ -148,12 +149,12 @@ typical word processor."
 
 (global-set-key (kbd "C-c c") 'org-capture)
 
-(setq org-capture-templates
-      `(("t" "todo" entry (file "")  ; "" => `org-default-notes-file'
-         "* NEXT %?\n%U\n" :clock-resume t)
-        ("n" "note" entry (file "")
-         "* %? :NOTE:\n%U\n%a\n" :clock-resume t)
-        ))
+;; (setq org-capture-templates
+;;       `(("t" "todo" entry (file "")  ; "" => `org-default-notes-file'
+;;          "* NEXT %?\n%U\n" :clock-resume t)
+;;         ("n" "note" entry (file "")
+;;          "* %? :NOTE:\n%U\n%a\n" :clock-resume t)
+;;         ))
 
 
 

@@ -174,6 +174,7 @@
 (require 'init-hotkey)
 (require 'init-setting)
 (require 'init-magit)
+(require 'init-plant-uml)
 (load-theme 'monokai)
 
 ;;----------------------------------------------------------------------------
