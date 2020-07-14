@@ -4,4 +4,6 @@
 
 (add-auto-mode 'csharp-mode "\\.[Cc][Ss]\\'")
 
+(require-package 'stack-mode)
+
 (provide 'init-csharp)
